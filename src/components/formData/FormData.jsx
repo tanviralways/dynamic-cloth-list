@@ -26,11 +26,9 @@ function FormData() {
     setAllProducts([...allProducts, clothData]);
   };
 
-  const deleteCloth = (name) => {
+  const deleteCloth = (id) => {
     const rest = allProducts.filter((products) => {
-      console.log(products.name);
-      console.log(name);
-      products.name !== name;
+      return products.id !== id;
     });
     console.log(rest);
     setAllProducts(rest);

@@ -3,8 +3,6 @@ import { MdDeleteForever } from "react-icons/md";
 function ClothTable(props) {
   const { name, id, price, quantity, color, description } = props.products;
 
-  
-
   return (
     <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
       <td className="px-6 py-4">{name}</td>
@@ -14,7 +12,11 @@ function ClothTable(props) {
       <td className="px-6 py-4">{color}</td>
       <td className="px-6 py-4">{description}</td>
       <td>
-        <MdDeleteForever onClick={() => props.deleteCloth(id)} color="red" />
+        <MdDeleteForever
+          className="cursor-pointer"
+          onClick={() => props.deleteCloth(id)}
+          color="red"
+        />
       </td>
     </tr>
   );

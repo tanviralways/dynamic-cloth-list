@@ -12,25 +12,36 @@ function FormData() {
     description: "",
   });
   const [allProducts, setAllProducts] = useState([]);
-  console.log(allProducts);
   const { name, id, price, quantity, color, description } = clothData;
 
   const handleChange = (e) => {
     const fieldName = e.target.name;
     setclothData({ ...clothData, [fieldName]: e.target.value });
   };
+  // const clearInputField = () => {
+
+  // };
   const handleSubmit = (e) => {
     e.preventDefault();
 
     console.log("submited");
     setAllProducts([...allProducts, clothData]);
+    console.log(clothData);
+    // clearInputField();
+    setclothData({
+      name: "",
+      id: "",
+      price: "",
+      quantity: "",
+      color: "",
+      description: "",
+    });
   };
 
   const deleteCloth = (id) => {
     const rest = allProducts.filter((products) => {
       return products.id !== id;
     });
-    console.log(rest);
     setAllProducts(rest);
   };
 
@@ -170,8 +181,12 @@ function FormData() {
                   {/* {products.map((product) => (
                    <Product deleteProduct={deleteProduct} product={product} />
                  ))} */}
-                  {allProducts.map((products) => (
-                    <ClothTable products={products} deleteCloth={deleteCloth} />
+                  {allProducts.map((products, index) => (
+                    <ClothTable
+                      products={products}
+                      deleteCloth={deleteCloth}
+                      key={index}
+                    />
                   ))}
                 </tbody>
               </table>

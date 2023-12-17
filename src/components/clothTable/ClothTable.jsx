@@ -13,7 +13,7 @@ function ClothTable(props) {
       <td className="px-6 py-4">{description}</td>
       <td>
         <MdDeleteForever
-          className="cursor-pointer"
+         
           onClick={() => props.deleteCloth(id)}
           color="red"
         />

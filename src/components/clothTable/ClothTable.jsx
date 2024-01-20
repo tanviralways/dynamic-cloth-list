@@ -4,7 +4,7 @@ function ClothTable(props) {
   const { name, id, price, quantity, color, description } = props.products;
 
   return (
-    <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+    <tr className=" border-b dark:bg-gray-800 dark:border-gray-700">
       <td className="px-6 py-4">{name}</td>
       <td className="px-6 py-4">{id}</td>
       <td className="px-6 py-4">{price}</td>

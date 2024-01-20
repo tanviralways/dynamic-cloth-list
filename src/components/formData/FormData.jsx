@@ -196,7 +196,7 @@ function FormData() {
                 setAllProducts([]);
               }}
               type="button"
-              className="text-white border border-red-600 mt-1  hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium  text-sm px-5 py-2.5 text-center me-2 mb-2 w-2/5">
+              className="text-white border border-red-600 mt-1  hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium  text-sm px-5 py-2.5 text-center me-2 mb-2 w-[36%]">
               Remove All
             </button>
           </>
